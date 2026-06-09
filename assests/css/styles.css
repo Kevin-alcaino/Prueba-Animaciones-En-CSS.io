@@ -110,6 +110,7 @@ nav {
 menu {
     grid-area: menu;
     height: auto;
+    background-image: url(../img/fondo\ .png);
 }
 
 .intro{
