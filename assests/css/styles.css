@@ -95,7 +95,6 @@ body {
 }
 
 
-
 nav {
 
     grid-area: nav;
@@ -129,6 +128,31 @@ main {
     background-color: rgb(245, 245, 231);
     align-items: center;
     padding: 30px;  
+}
+
+
+/* ==========================================
+   EFECTO ZOOM PARA LAS TARJETAS (MAIN)
+   ========================================== */
+
+.efecto-imagen {
+    width: 100%;
+    max-width: 350px;     /* Se acopla al ancho de tu tarjeta */
+    height: 250px;        /* Alto fijo para mantener la simetría de la grilla */
+    overflow: hidden;     /* ¡Clave! Corta la imagen para que no se salga de la tarjeta al agrandarse */
+    border-radius: 10px 10px 0 0; /* Mantiene redondeadas solo las esquinas de arriba */
+}
+
+.efecto-imagen .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;     /* Animación suave de medio segundo */
+}
+
+/* Transición al pasar el mouse por encima de la imagen */
+.efecto-imagen .img:hover {
+    transform: scale(1.5); /* Hace el zoom de 1.5 que solicitaste */
 }
 
 
