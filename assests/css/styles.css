@@ -73,6 +73,7 @@ body {
     grid-template-areas:
     "nav"
     "menu"
+    "intro"
     "main"
     "detalles"
     "footer";
@@ -94,6 +95,15 @@ nav {
 menu {
     grid-area: menu;
     height: auto;
+}
+
+.intro{
+    grid-area: intro;
+    background-image: url(../img/fondo\ .png);
+    height: 220px;
+    color: aliceblue;
+    padding: 25px 25px ;
+    -ms-text-align-last: ;
 }
 
 main {
@@ -234,27 +244,16 @@ footer {
     body {
         grid-template-areas:
         "nav nav"
-        "menu main"
-        "menu detalles"
+        "menu menu"
+        "intro intro"
+        "main main"
+        "detalles detalles"
         "footer footer";
         grid-template-columns: 250px 1fr;    
         grid-template-rows: 80px auto auto auto;
     }
 
-    .menu-contenedor {
-        display: flex;
-        flex-direction: column;  
-        justify-content: flex-start;
-        align-items: flex-start;  
-        gap: 20px;                
-    }
-
-    .iconos-grupo {
-        display: flex;
-        flex-direction: column;  
-        gap: 15px;                
-    }
-
+ 
     main {
         display: grid;
         grid-template-columns: 1fr 1fr; 
