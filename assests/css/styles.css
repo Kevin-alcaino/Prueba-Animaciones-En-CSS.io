@@ -88,10 +88,25 @@ nav {
     color: azure;
     display: flex;
     align-items: center;
+    justify-content: flex-start; 
     padding: 0px 25px;
     font-family: "Roboto Slab", serif;
+    background-color: #000000;
 }
 
+.titulo {
+    height: 100%;      
+    display: flex;/
+    align-items: center;
+}
+
+.titulo img {
+    height: auto;       
+    max-height: 60px;   
+    width: auto;        
+    object-fit: contain;
+    filter: invert(100%); 
+}
 menu {
     grid-area: menu;
     height: auto;
