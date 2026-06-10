@@ -224,6 +224,11 @@ main {
     line-height: 1.4;
     color: #555;
 }
+.card:hover {
+  /* Sube la tarjeta */
+  transform: translateY(-15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
 
 /* Footer */
 footer {
