@@ -120,9 +120,19 @@ menu {
     grid-area: menu;
 }
 
-.buscador {
-    max-width: 180px;
+.menu-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;      
+    padding: 10px 15px; 
+    background-color: black;    
     width: 100%;
+    flex-wrap: nowrap;
+
+.buscador {
+    width: 60%; 
+    max-width: 300px; 
+    flex-shrink: 1; 
 }
 .intro {
     grid-area: intro;
@@ -306,9 +316,5 @@ footer {
         flex-direction: row;
         justify-content: space-around;
         padding: 15px 10px;
-    }
-
-    .buscador {
-        max-width: 300px;
     }
 }
