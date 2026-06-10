@@ -277,11 +277,13 @@ footer {
         grid-template-rows: 80px auto auto auto;
     }
 
-    main {
+   main {
         display: grid;
-        grid-template-columns: repeat(2, max-content); 
-        justify-content: center;                        
-        justify-items: center;                        
+        grid-template-columns: repeat(2, 1fr); 
+        max-width: 800px;
+        margin: 0 auto; 
+        justify-content: center;                                                        
+        justify-items: center;                                                        
         gap: 40px; 
         padding: 30px;  
     }
