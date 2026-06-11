@@ -15,7 +15,9 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Estructura Base (Móvil Primero) */
+/* ===============================
+   Estructura Base (Móvil Primero)
+   =============================== */
 body {
     display: grid;
     grid-template-areas:
