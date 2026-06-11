@@ -79,7 +79,7 @@ menu {
     padding: 5px;
 }
 
-/* Buscador Reemplazo de Bootstrap */
+/* Buscador  */
 .buscador {
     flex: 1;
     max-width: 60%;
@@ -95,18 +95,7 @@ menu {
     outline: none;
 }
 
-.iconos-grupo {
-    display: flex;
-    gap: 12px;
-    flex-shrink: 0;
-}
 
-.logo img {
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    filter: invert(90%) sepia(10%) saturate(300%) hue-rotate(340deg);
-}
 
 /* Sección Intro */
 .intro {
@@ -121,8 +110,8 @@ menu {
     width: 100%;
 }
 
-.intro h4 {
-    font-size: 15px;
+.intro p {
+    font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 12px;
     font-weight: 400;
@@ -139,6 +128,14 @@ main {
     width: 100%;
 }
 
+#productos{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 40px;  
+    align-items: center;                           
+    width: 100%;         
+    max-width: 330px;          
+    }
 .tarjeta {
     width: 100%;            
     max-width: 330px;        
