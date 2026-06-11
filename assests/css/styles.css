@@ -6,7 +6,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
-   
 }
 
 /* Control total de la pantalla */
@@ -60,7 +59,9 @@ nav {
     filter: invert(100%); 
 }
 
-/* Menú Contenedor de una sola línea */
+/* ============================
+    Menú Contenedor (Móvil Base)
+    ============================ */
 menu {
     grid-area: menu;
 }
@@ -72,20 +73,63 @@ menu {
     padding: 12px 15px;
     background-color: black;    
     width: 100%;
+    position: relative; 
 }
 
-.link a{
+.link a {
     color: aliceblue;
     padding: 5px;
 }
 
-/* Buscador  */
-.buscador {
-    flex: 1;
-    max-width: 60%;
-    margin-right: 15px;
+/* Ocultamos el checkbox */
+.menu-check {
+    display: none;
 }
 
+/* Estilos del icono hamburguesa  */
+.menu-icono {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    order: 2; 
+}
+
+.menu-icono span {
+    width: 100%;
+    height: 2px;
+    background-color: aliceblue;
+    transition: 0.3s ease;
+}
+
+/* Contenedor menu */
+.menu-links {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    padding: 15px;
+    gap: 15px;
+    z-index: 100;
+}
+
+/* Activación del menú al marcar el checkbox */
+.menu-check:checked ~ .menu-links {
+    display: flex;
+}
+
+/* Buscador */
+.buscador {
+    flex: 1;
+    max-width: 65%;
+    margin-right: 15px;
+    order: 1; 
+}
 .buscador input {
     width: 100%;
     padding: 8px 12px;
@@ -94,8 +138,6 @@ menu {
     font-size: 14px;
     outline: none;
 }
-
-
 
 /* Sección Intro */
 .intro {
@@ -128,14 +170,15 @@ main {
     width: 100%;
 }
 
-#productos{
+#productos {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 40px;  
-    align-items: center;                           
+    align-items: center;                                       
     width: 100%;         
     max-width: 330px;          
-    }
+}
+
 .tarjeta {
     width: 100%;            
     max-width: 330px;        
@@ -227,13 +270,12 @@ main {
 .card p {
     font-size: 13px;
     line-height: 1.4;
-    
-}
-.card:hover {
-background-color: #000;
-color: aliceblue;
 }
 
+.card:hover {
+    background-color: #000;
+    color: aliceblue;
+}
 
 /* Footer */
 footer {
@@ -253,8 +295,8 @@ footer {
     gap: 8px;              
 }
 
-.foot a{
-     color: aliceblue
+.foot a {
+     color: aliceblue;
 }
 
 .foot img {
@@ -269,7 +311,7 @@ footer {
 }
 
 /* ==========================================
-   MEDIA QUERIES (ESCRITORIO)
+    MEDIA QUERIES (ESCRITORIO)
    ========================================== */
 @media (min-width: 576px) {
     body {
@@ -281,16 +323,30 @@ footer {
         "footer footer";
         grid-template-columns: 250px 1fr;    
         grid-template-rows: 80px auto auto auto;
-            
     }
 
     .menu-contenedor {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: flex-start; 
-    align-items: flex-start;
-}
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start; 
+        align-items: flex-start;
+        position: static;
+    }
+
+    /* Esconde el menú  */
+    .menu-icono {
+        display: none;
+    }
+
+    /* Restaura los links para que se pinten en bloque vertical en el lateral */
+    .menu-links {
+        display: flex !important;
+        flex-direction: column;
+        position: static;
+        padding: 0;
+        gap: 20px;
+    }
 
     main {
         grid-area: main;
@@ -301,13 +357,12 @@ footer {
     #productos {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
-        gap: 40px;                             
+        gap: 40px;                                             
         width: 100%;
         max-width: 800px;                      
         margin: 0 auto;                        
         justify-items: center;                 
     }
-
     
     .detalles {
         flex-direction: row;       
@@ -317,7 +372,7 @@ footer {
     }
 
     .card {
-        flex: 1;                                   
+        flex: 1;                                                   
     }
 
     footer {
