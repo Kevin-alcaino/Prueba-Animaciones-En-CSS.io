@@ -279,6 +279,7 @@ footer {
         "footer footer";
         grid-template-columns: 250px 1fr;    
         grid-template-rows: 80px auto auto auto;
+            
     }
 
     .menu-contenedor {
@@ -287,22 +288,25 @@ footer {
     gap: 20px;
     justify-content: flex-start; 
     align-items: flex-start;
-
 }
 
-    
-
     main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
+        grid-area: main;
+        display: block; 
         width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        gap: 40px; 
-        padding: 40px 20px;  
-        justify-items: center; 
     }
 
+    #productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px;                             
+        width: 100%;
+        max-width: 800px;                      
+        margin: 0 auto;                        
+        justify-items: center;                 
+    }
+
+    
     .detalles {
         flex-direction: row;       
         justify-content: center;
