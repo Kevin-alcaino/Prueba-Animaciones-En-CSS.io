@@ -6,6 +6,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
+   
 }
 
 /* Control total de la pantalla */
@@ -255,6 +256,10 @@ footer {
     gap: 8px;              
 }
 
+.foot a{
+     color: aliceblue
+}
+
 .foot img {
     width: 18px;           
     height: 18px;          
@@ -263,7 +268,7 @@ footer {
 }
 
 .foot p {
-    font-size: 12px;       
+    font-size: 1rem;       
 }
 
 /* ==========================================
